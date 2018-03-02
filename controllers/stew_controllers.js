@@ -20,6 +20,27 @@ router.post("/api/stews", function(req, res) {
     "name"
   ], [
     req.body.stew_name
-  ]
-  ])
-})
+  ], function(result) {
+    res.json({ id: result.insertId });
+  });
+});
+
+router.put("/api/stews/:id", function(req, res) {
+  var condition = "id = " + req.params.id;
+
+  console.log("condition", condition);
+
+  cat.update({
+    devoured: req.body.sleepy
+  }, condition, function(result) {
+    if (result.changedRows == 0) {
+      return res.status(404).end();
+    }
+    else {
+      res.status(200).end();
+    }
+  });
+});
+
+// Export routes to server.js
+module.exports = router;
