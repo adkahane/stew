@@ -81,5 +81,5 @@ var orm = {
   }
 };
 
-// Export for cat.js
+// Export for stew.js
 module.exports = orm;

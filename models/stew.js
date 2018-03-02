@@ -1,6 +1,6 @@
 var orm = require("../config/orm.js");
 
-var stewOrm = {
+var stew = {
   selectAll: function(cb) {
     orm.selectAll("stew", function(res) {
       cb(res);
@@ -19,4 +19,4 @@ var stewOrm = {
 };
 
 // Export ORM functions to controller
-module.exports = stewOrm;
+module.exports = stew;
