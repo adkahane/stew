@@ -21,8 +21,8 @@ Make a stew...and eat it!
   
   1. To visit Heroku deployed web app, type `https://eatmystew.herokuapp.com/` in your browser or click this link: [Make A Stew](https://eatmystew.herokuapp.com/ "Heroku deployed web app")
   
-  ![image showing heroku deployment](assets/heroku_readme.jpg "Heroku")
+  ![image showing heroku deployment](public/assets/heroku_readme.jpg "Heroku")
   
   3. Type in the name of your stew and submit it to the "ready to eat" box. 
   4. Press the devour button to feast on your stew!
-    ![GIF of too high a quantity](assets/stew_demo.gif "gif of app")
+    ![GIF of too high a quantity](public/assets/stew_demo.gif "gif of app")
