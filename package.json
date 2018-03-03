@@ -2,7 +2,7 @@
   "name": "stew",
   "version": "1.0.0",
   "description": "Make a stew...and eat it!",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

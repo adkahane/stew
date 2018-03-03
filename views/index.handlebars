@@ -1,5 +1,53 @@
 <div class="container">
-  <div class="jumbotron">
-    <h1>You got yourself a stew mister!</h1>
+  <div class="jumbotron bg-primary text-center text-white">
+    <div class="row">
+      <div class="col-3">
+        <img src="/assets/pot.png" alt="Stew" height="100" width="100">
+      </div>
+      <div class="col-6">
+        <h1>Put it in a stew!</h1>
+      </div>
+    </div>
   </div>
+  <div id="before" class="row">
+    <div class="col-6 bg-success">
+      <h3>Delicious Stew ready to eat.</h3>
+      <ul>
+        {{#each stew}}
+          {{#unless devoured}}
+            {{>stew-block devour=true}}
+          {{/unless}}
+        {{/each}}
+      </ul>
+    </div>
+
+    <div id="after" class="col-6 bg-danger">
+      <h3>Look at all the stew you ate!</h3>
+      <ul>
+        {{#each stew}}
+          {{#if devoured}}
+            {{>eaten-block devour=false}}
+          {{/if}}
+        {{/each}}
+      </ul>
+    </div>
+
+  </div>
+<br><br><br>
+
+  <div class="row">
+    <div class="col text-center">
+      <form class="create-form">
+        <div class="form-group">
+          <label for="stewName">Stew Name: </label>
+          <input type="text" id="stewName" name="name">
+        </div>
+
+        <button type="submit">Add This Stew</button>
+      </form>
+    </div>
+  </div>
+
 </div>
+
+<div>Icons made by <a href="https://www.flaticon.com/authors/becris" title="Becris">Becris</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>

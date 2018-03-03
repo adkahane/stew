@@ -8,7 +8,7 @@ var router = express.Router();
 router.get("/", function(req, res) {
   stew.selectAll(function(data) {
     var hbsObject = {
-      cats: data
+      stew: data
     };
     console.log(hbsObject);
     res.render("index", hbsObject);
@@ -17,7 +17,7 @@ router.get("/", function(req, res) {
 
 router.post("/api/stews", function(req, res) {
   stew.insertOne([
-    "name"
+    "stew_name"
   ], [
     req.body.stew_name
   ], function(result) {
@@ -30,8 +30,8 @@ router.put("/api/stews/:id", function(req, res) {
 
   console.log("condition", condition);
 
-  cat.update({
-    devoured: req.body.sleepy
+  stew.update({
+    devoured: req.body.devoured
   }, condition, function(result) {
     if (result.changedRows == 0) {
       return res.status(404).end();

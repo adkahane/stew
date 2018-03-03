@@ -12,7 +12,7 @@ var stew = {
     });
   },
   update: function(objColVals, condition, cb) {
-    orm.update("stew", objColVals, condition, function(res) {
+    orm.updateOne("stew", objColVals, condition, function(res) {
       cb(res);
     });
   }
