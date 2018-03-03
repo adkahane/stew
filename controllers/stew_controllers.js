@@ -14,7 +14,7 @@ router.get("/", function(req, res) {
     res.render("index", hbsObject);
   });
 });
-
+// Create a post route for new stews
 router.post("/api/stews", function(req, res) {
   stew.insertOne([
     "stew_name"
@@ -24,7 +24,7 @@ router.post("/api/stews", function(req, res) {
     res.json({ id: result.insertId });
   });
 });
-
+// Create a put route to update status of stew to devoured
 router.put("/api/stews/:id", function(req, res) {
   var condition = "id = " + req.params.id;
 

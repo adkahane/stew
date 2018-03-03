@@ -9,42 +9,39 @@
       </div>
     </div>
   </div>
-  <div class="row">
-    {{!-- <div class="col-6 bg-success"> --}}
-      <div id="before" class="card col-6 bg-success" style="width: 30rem;">
-        <div class="card-body">
-          <h5 class="card-title">Delicious Stew ready to eat.</h5>
-          <h6 class="card-subtitle mb-2 text-muted">push button to eat</h6>
-          <p class="card-text">
-            <ul>
-              {{#each stew}}
-                {{#unless devoured}}
-                  {{>stew-block devour=true}}
-                {{/unless}}
-              {{/each}}
-            </ul>
-          </p>
-        </div>
+  <div class="row justify-content-between">
+    
+    <div id="before" class="card col-5 bg-success" style="width: 30rem;">
+      <div class="card-body">
+        <h5 class="card-title">Delicious Stew ready to eat.</h5>
+        <h6 class="card-subtitle mb-2 text-muted">push button to eat</h6>
+        <p class="card-text">
+          <ul>
+            {{#each stew}}
+              {{#unless devoured}}
+                {{>stew-block devour=true}}
+              {{/unless}}
+            {{/each}}
+          </ul>
+        </p>
       </div>
-    {{!-- </div> --}}
+    </div>
 
-    {{!-- <div id="after" class="col-6 bg-danger"> --}}
-      <div id = "after" class="card col-6 bg-danger" style="width: 30rem;">
-        <div class="card-body">
-          <h5 class="card-title">Look at all the stew you ate.</h5>
-          <h6 class="card-subtitle mb-2 text-muted">push button to eat</h6>
-          <p class="card-text">
-            <ul>
-              {{#each stew}}
-                {{#if devoured}}
-                  {{>eaten-block devour=false}}
-                {{/if}}
-              {{/each}}
-            </ul>
-          </p>
-        </div>
+    <div id = "after" class="card col-5 bg-danger" style="width: 30rem;">
+      <div class="card-body">
+        <h5 class="card-title">Look at all the stew you ate.</h5>
+        <h6 class="card-subtitle mb-2 text-muted">push button to eat</h6>
+        <p class="card-text">
+          <ul>
+            {{#each stew}}
+              {{#if devoured}}
+                {{>eaten-block devour=false}}
+              {{/if}}
+            {{/each}}
+          </ul>
+        </p>
       </div>
-    {{!-- </div> --}}
+    </div>
 
   </div>
 <br><br><br>
