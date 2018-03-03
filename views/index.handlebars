@@ -9,28 +9,42 @@
       </div>
     </div>
   </div>
-  <div id="before" class="row">
-    <div class="col-6 bg-success">
-      <h3>Delicious Stew ready to eat.</h3>
-      <ul>
-        {{#each stew}}
-          {{#unless devoured}}
-            {{>stew-block devour=true}}
-          {{/unless}}
-        {{/each}}
-      </ul>
-    </div>
+  <div class="row">
+    {{!-- <div class="col-6 bg-success"> --}}
+      <div id="before" class="card col-6 bg-success" style="width: 30rem;">
+        <div class="card-body">
+          <h5 class="card-title">Delicious Stew ready to eat.</h5>
+          <h6 class="card-subtitle mb-2 text-muted">push button to eat</h6>
+          <p class="card-text">
+            <ul>
+              {{#each stew}}
+                {{#unless devoured}}
+                  {{>stew-block devour=true}}
+                {{/unless}}
+              {{/each}}
+            </ul>
+          </p>
+        </div>
+      </div>
+    {{!-- </div> --}}
 
-    <div id="after" class="col-6 bg-danger">
-      <h3>Look at all the stew you ate!</h3>
-      <ul>
-        {{#each stew}}
-          {{#if devoured}}
-            {{>eaten-block devour=false}}
-          {{/if}}
-        {{/each}}
-      </ul>
-    </div>
+    {{!-- <div id="after" class="col-6 bg-danger"> --}}
+      <div id = "after" class="card col-6 bg-danger" style="width: 30rem;">
+        <div class="card-body">
+          <h5 class="card-title">Look at all the stew you ate.</h5>
+          <h6 class="card-subtitle mb-2 text-muted">push button to eat</h6>
+          <p class="card-text">
+            <ul>
+              {{#each stew}}
+                {{#if devoured}}
+                  {{>eaten-block devour=false}}
+                {{/if}}
+              {{/each}}
+            </ul>
+          </p>
+        </div>
+      </div>
+    {{!-- </div> --}}
 
   </div>
 <br><br><br>
@@ -49,5 +63,7 @@
   </div>
 
 </div>
-
-<div>Icons made by <a href="https://www.flaticon.com/authors/becris" title="Becris">Becris</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
+<br><br>
+<div class="row text-center">
+  <div class="col">Icons made by <a href="https://www.flaticon.com/authors/becris" title="Becris">Becris</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
+</div>
